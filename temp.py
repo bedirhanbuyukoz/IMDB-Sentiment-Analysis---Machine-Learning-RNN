@@ -138,7 +138,7 @@ decoded_review = whatItSay(2)
 # %% RNN
 
 rnn = Sequential()
-rnn.add(Embedding(num_words,32,input_length = len(X_train[0]))) #int çevirmeyi unutma!
+rnn.add(Embedding(num_words,32,input_length = len(X_train[0]))) 
 rnn.add(SimpleRNN(16, input_shape = (num_words, maxlen), return_sequences = False, activation = "relu" )) #Sequential yapıma simpler Rnn eklendi
 rnn.add(Dense(1)) 
 rnn.add(Activation("sigmoid")) #act.fon. sigmoid binary classnification
